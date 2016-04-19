@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+     <player.VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:background="@drawable/shap_gb"
+        android:id="@+id/tv_volume"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/volume_high"
+        android:paddingLeft="8dp"
+        android:drawablePadding="-8dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text="20%"/>
+
+    <include layout="@layout/layout_top_control" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/layout_bottom_control" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_player_loading_background"
+        android:orientation="horizontal" >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/btn_exit_video"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:paddingLeft="11dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/btn_close_video"
+            />
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/cumstor_progress_video"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_buffering"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

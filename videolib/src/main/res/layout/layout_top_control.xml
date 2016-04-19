@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_top_control"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_height="48dp"
+        android:background="#b0000000"
+        android:orientation="horizontal" >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/btn_exit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="11dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/btn_close_video"
+           />
+        
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_name"
+            android:text="视频名称"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+        
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_battery"
+            android:background="@mipmap/ic_battery_0"/>
+        
+        <TextView android:layout_width="wrap_content"
+            android:text="系统时间"
+            android:id="@+id/tv_system_time"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+
+
+
+</LinearLayout>
